@@ -8,7 +8,7 @@ pipeline {
         stage('pull scm') {
               steps {
                      script {
-                             scm checkout  
+                             checkout scm  
                         }
                      
                     
