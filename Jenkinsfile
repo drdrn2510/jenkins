@@ -7,7 +7,11 @@ pipeline {
     stages {
         stage('pull scm') {
               steps {
-                     scm checkout  
+                     script {
+                             scm checkout  
+                        }
+                     
+                    
               }
         }
 
