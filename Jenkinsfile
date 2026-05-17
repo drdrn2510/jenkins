@@ -13,7 +13,9 @@ pipeline {
                         echo 'Starting Task A...'
                         echo 'Task A is doing some work.'
                         echo 'Task A finished.'
-                        codeQuality.sonarCreateProject("test")
+                        script {
+                            codeQuality.sonarCreateProject("test")
+                        }
                     }
                 }
 
