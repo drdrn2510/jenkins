@@ -5,6 +5,12 @@ pipeline {
     agent any
 
     stages {
+        stage('pull scm') {
+              steps {
+                     scm checkout  
+              }
+        }
+
         stage('Parallel Echo Tasks') {
             parallel {
                 
