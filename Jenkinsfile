@@ -24,6 +24,9 @@ pipeline {
                         echo 'Starting Task B...'
                         echo 'Task B is running simultaneously.'
                         echo 'Task B finished.'
+                        script {
+                            codeQuality.sonarLocalScan()
+                        }
                     }
                 }
 
