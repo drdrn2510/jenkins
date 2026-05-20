@@ -15,4 +15,3 @@ EXPOSE 3000
 ENV API_KEY="super-secret-token-12345"
 
 CMD ["node", "index.js"]
-EOF
