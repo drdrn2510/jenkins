@@ -24,7 +24,14 @@ podTemplate(cloud: 'kubernetes', containers: [
 	    checkout scm
           }
         } // end chackout
-
+		  stage('Docker login ') {
+            container('docker') {
+              withCredentials([string(credentialsId: 'dockerpat', variable: 'MY_PAT')]) {
+                sh 'echo "$MY_PAT" | docker login --username USER --password-stdin'
+                sh 'echo docker login'
+              }
+            }
+        }
         stage('Hello') {
             container('docker') {
               echo "Building docker image..."
