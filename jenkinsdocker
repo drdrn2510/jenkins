@@ -27,7 +27,7 @@ podTemplate(cloud: 'kubernetes', containers: [
 		  stage('Docker login ') {
             container('docker') {
               withCredentials([string(credentialsId: 'dockerpat', variable: 'MY_PAT')]) {
-                sh 'echo "$MY_PAT" | docker login --username USER --password-stdin'
+                sh 'echo "$MY_PAT" | docker login --username drdrn2510spam --password-stdin'
                 sh 'echo docker login'
               }
             }
